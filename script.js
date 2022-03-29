@@ -40,10 +40,10 @@ switch (lang) {
 
 //c
 const week = [
-	'ru', ['Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
-	'en', ['Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']	
+	'ru', ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+	'en', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']	
 ];
-console.log(week[week.indexOf(lang)+1][0]);
+console.log(week[week.indexOf(lang)+1]);
 
 //задание 2
 const namePerson = 'Александр';
