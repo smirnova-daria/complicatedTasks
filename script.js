@@ -1,23 +1,5 @@
 'use strict';
 
-let num = 266219;
-
-//переменная для результирующего значения
-let multiplication = 1;
-
-//цикл для произведения цифр числа num
-while (num) {
-	multiplication *= (num % 10);
-	num = Math.floor(num / 10);
-}
-
-console.log(multiplication);
-
-let exponentiation = multiplication ** 3;
-
-console.log(exponentiation.toString().substring(0, 2));
-
-//урок 3
 //задание 1
 const lang = 'en';
 
@@ -39,11 +21,11 @@ switch (lang) {
 }
 
 //c
-const week = [
-	'ru', ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-	'en', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']	
-];
-console.log(week[week.indexOf(lang)+1]);
+const week = {
+	'ru': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+	'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+};
+console.log(week[lang]);
 
 //задание 2
 const namePerson = 'Александр';
