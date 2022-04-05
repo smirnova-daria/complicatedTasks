@@ -4,3 +4,13 @@
 .italic {
 	font-style: italic;
 }
+div {
+	border: 1px solid #ccc;
+	width: 300px;
+	height: 100px;
+	margin: 0 auto;
+	padding: 10px;
+}
+.first {
+	margin-bottom: 20px;
+}
