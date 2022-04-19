@@ -1,17 +1,24 @@
-let num = 266219;
+'use strict'
 
-//переменная для результирующего значения
-let multiplication = 1;
+const input = document.querySelector('input')
+const paragraph = document.querySelector('p')
 
-//цикл для произведения цифр числа num
-while (num) {
-	multiplication *= (num % 10);
-	num = Math.floor(num / 10);
+
+const print = () => {
+	paragraph.textContent = ''
+	paragraph.textContent += input.value
 }
 
-console.log(multiplication);
+const debounce = function (f, t) {
+	return function () {
+		let previousCall = this.lastCall;
+		this.lastCall = Date.now()
 
-let exponentiation = multiplication ** 3;
+		if (previousCall && ((this.lastCall - previousCall) <= t)) {
+			clearTimeout(this.lastCallTimer)
+		}
+		this.lastCallTimer = setTimeout(f, t)
+	}
+}
 
-console.log(exponentiation.toString().substring(0, 2));
-
+input.addEventListener('input', debounce(print, 300))
